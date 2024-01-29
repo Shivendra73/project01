@@ -1,0 +1,8 @@
+- hosts: node
+  become: true
+  tasks:
+     - name: create new deployment
+       command: kubectl apply -f=Deployment.yaml
+     - name: create new services
+       command: kubectl apply -f=Service.yaml
+
